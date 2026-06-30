@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 st.title("Sales Trend and Time-based Performance Dashboard")
-df=pd.read_csv(r"C:\\Users\\lenovo\\Downloads\\Afficionado Coffee Roasters.csv")
+df=pd.read_csv("Afficionado Coffee Roasters.csv")
 df['revenue']=df['transaction_qty']*df['unit_price']
 df["transaction_time"]=pd.to_datetime(df["transaction_time"],format="%H:%M:%S %p")
 df["hour"]=df["transaction_time"].dt.hour
